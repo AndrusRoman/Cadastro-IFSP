@@ -13,7 +13,7 @@
         $sql = "SELECT * FROM cidade";
         $result = mysqli_query($con, $sql);
     ?>
-    <h1>Consluta de Cidades</h1>
+    <h1>Consulta de Cidades</h1>
     <button><a href="index.html">Retornar</a></button>
     <table align="center" border="1" width="500">
         <tr>
