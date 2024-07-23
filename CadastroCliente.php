@@ -24,9 +24,9 @@
             <input type="password" name="senha" id="senha">
         </div>
         <div>
-            <label for="ativo">Ativo</label>
-            <input type="radio" id="ativo" name="Sim" value="1">Sim <br>
-            <input type="radio" id="ativo" name="Nao" value="0">Não<br>
+            <label for="">Ativo</label>
+            <input type="radio" id="ativo" name="ativo" value="1">Sim<br>
+            <input type="radio" id="ativo" name="ativo" value="0">Não<br>
         </div>
         <br>
         <div>

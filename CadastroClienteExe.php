@@ -19,6 +19,8 @@
         echo "Nome: $nome<br>";
         echo "Email: $email<br>";
         echo "Senha: $senha<br>";
+        echo "Ativo: $ativo<br>";
+        echo "Cidade: $cidade<br>";
 
 
         $sql = "INSERT INTO cliente (nome, email, senha, ativo, id_cidade)";
