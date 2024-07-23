@@ -29,8 +29,10 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
+input[type="password"],
 select {
-    width: calc(100% - 20px); /* Largura total com ajuste para o padding */
+    width: 100%; /* Largura total */
     padding: 10px; /* Espaçamento interno */
     margin-bottom: 15px; /* Espaçamento abaixo do campo */
     border: 1px solid #ccc; /* Borda cinza */
@@ -40,11 +42,6 @@ select {
 
 select {
     appearance: none; /* Remove os estilos padrão do select */
-    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%); /* Cria um background xadrez para o select */
-    background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 5px) calc(1em + 2px); /* Posiciona as linhas do background */
-    background-size: 5px 5px; /* Tamanho das linhas do background */
-    background-repeat: no-repeat; /* Evita a repetição */
-    padding-right: 20px; /* Espaçamento interno à direita para o indicador do select */
 }
 
 button {
@@ -53,7 +50,7 @@ button {
     color: #fff; /* Cor do texto */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Altera o cursor ao passar por cima */   
+    cursor: pointer; /* Altera o cursor ao passar por cima */
     transition: background-color 0.3s; /* Transição suave da cor de fundo */
 }
 

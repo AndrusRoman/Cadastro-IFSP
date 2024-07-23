@@ -10,12 +10,12 @@
 <body>
     <fieldset>
     <h1>O que deseja fazer?</h1>
-    <button><a href="CadastroCidade.html">Cadastrar Cidade</a></button>
+    <button><a href="CadastroCidade.php">Cadastrar Cidade</a></button>
     <button><a href="ListarCidade.php">Listar Cidade</a></button>
     <br>
     <br>   
-    <button><a href="CadastroCliente.html">Cadastrar Usuários</a></button>
-    <button><a href="ListarCliente.php">Listar Usuários</a></button>
+    <button><a href="CadastroCliente.php">Cadastrar Cliente</a></button>
+    <button><a href="ListarCliente.php">Listar Cliente</a></button>
     </fieldset>
 </body>
 </html>

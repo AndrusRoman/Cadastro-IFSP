@@ -17,7 +17,7 @@
 <body>
     <form action="AlteraClienteExe.php" method="post">
         <fieldset>
-        <legend>Cadastro de Clientes</legend>
+        <legend>Altera Cliente</legend>
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>">
@@ -32,6 +32,24 @@
         </div>
         <div>
             <input type="hidden" name="id" value="<?php echo $row['id']?>">
+        </div>
+        <div>
+            <label for="ativo">Ativo</label>
+            <input type="radio" id="ativo" name="ativo" value="1">Sim <br>
+            <input type="radio" id="ativo" name="ativo" value="0">Não <br>
+        </div>
+        <div>
+            <label for="cidade">Cidade</label>
+            <select name="cidade" id="cidade">
+            <?php
+                include('includes/conexao.php');
+                $sql = "SELECT * FROM cidade";
+                $result = mysqli_query($con,$sql);
+                while($row = mysqli_fetch_array($result)){
+                    echo "<option value='".$row['id']."'>".$row['nome']."/".$row['estado']."</option>";
+                }
+            ?>
+            </select>
         </div>
         <div>
             <button type="submit">Alterar <br></button>

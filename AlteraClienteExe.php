@@ -4,6 +4,8 @@
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $ativo = $_POST['ativo'];
+    $cidade = $_POST['cidade'];
 
 ?>
 <!DOCTYPE html>
@@ -18,10 +20,12 @@
     <h1> Alteração de cliente</h1>
     <?php 
         echo "<p>Id: $id</p>";
-        echo "<p>Nome: $nome</p>";
+        echo "<p>Nome cliente: $nome</p>";
         echo "<p>Email: $email</p>";
         echo "<p>Senha: $senha</p>";
-        $sql = "UPDATE cliente SET nome = '$nome', email = '$email', senha = '$senha' WHERE id = $id";
+        echo "<p>Ativo: $ativo</p>";
+        echo "<p>Nome cidade: $cidade</p>";
+        $sql = "UPDATE cliente SET nome = '$nome', email = '$email', senha = '$senha', ativo = '$ativo', id_cidade = '$cidade' WHERE id = $id";
         $result = mysqli_query($con, $sql);
         if($result)
             echo "Dados Atualizados";

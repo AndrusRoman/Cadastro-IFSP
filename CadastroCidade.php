@@ -5,30 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cssCadastrophp.css">
+    <link rel="stylesheet" href="cssCadastro.css">
 </head>
 <body>
-    <?php
-        include('includes/conexao.php');
-        $nome = $_POST['nome'];
-        $estado = $_POST['estado'];
-        echo "<h1>Dados da Cidade</h1>";
-        echo "Nome: $nome<br>";
-        echo "Estado: $estado<br>";
-
-        $sql = "INSERT INTO cidade (nome, estado)";
-        $sql .= "VALUES('".$nome."','".$estado."')";
-        echo $sql;
-        $result = mysqli_query($con,$sql);
-        if($result){
-            echo "<h1>Dados cadastrados com sucesso</h2>";
-        }else{
-            echo "<h2>Erro ao cadastrar!</h2>";
-            echo mysqli_error($con);
-        }
-    ?>
-    <div>
-        <button><a href="CadastroCidade.html">Retornar ao Cadastro</a></button>
-    </div>
+    <form action="CadastroCidadeExe.php" method="post">
+        <fieldset>
+        <legend>Cadastro de Cidades</legend>
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="nome">Estado</label>
+            <select name="estado" id="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Cadastrar</button>
+            <button><a href="index.php">Retornar</a></button>
+        </div>
+        </fieldset>
+    </form>
 </body>
 </html>

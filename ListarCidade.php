@@ -14,7 +14,7 @@
         $result = mysqli_query($con, $sql);
     ?>
     <h1>Consulta de Cidades</h1>
-    <button><a href="index.html">Retornar</a></button>
+    <button><a href="index.php">Retornar</a></button>
     <table align="center" border="1" width="500">
         <tr>
             <th>Código</th>
