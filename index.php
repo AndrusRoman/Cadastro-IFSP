@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cssIndex.css">
+    <?php
+        include('inicia_sessao.php');
+        if(empty($_SESSION['login'])){
+            header('location: login.html');
+        }
+        echo "Olá ". $_SESSION['login']['nome']; 
+    ?>
 </head>
 <body>
     <fieldset>
@@ -16,6 +23,8 @@
     <br>   
     <button><a href="CadastroCliente.php">Cadastrar Cliente</a></button>
     <button><a href="ListarCliente.php">Listar Cliente</a></button>
+    <br>
+    <button><a href="logout.php">Logout</a></button>
     </fieldset>
 </body>
 </html>
